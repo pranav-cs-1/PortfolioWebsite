@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 1 | My Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="index.html" class="logo-link">
+            <h1 class="logo">Pranav Vyas</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero">
+    <h2>KovaDx Internship</h2>
+    <p>Explore the details of my software engineering internship aimed at classifying hematological diseases, such as sickle cell disease and spherocytosis using advanced algorithms.</p>
+</section>
+
+<!-- Project Overview Section -->
+<section id="overview">
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>During my Software Engineering Internship at KovaDx, a Yale InnovateHealth accelerated startup, I designed and developed machine learning models for the classification of sickle cell disease and spherocytosis. The objective of this project was to design a set of machine learning models that would be able to predict if the patient was at risk of a vaso-occlusive crisis based on their blood sample. The project involved analyzing 900,000+ cellular phase images to determine the disease stages using advanced classification techniques and dimensionality reduction methods such as t-distributed Stochastic Neighborhood Embedding (t-SNE).</p>
+    </div>
+</section>
+
+<!-- Technologies Used Section -->
+<section id="technologies">
+    <div class="container">
+        <h2>Technologies Used</h2>
+        <div class="card">
+            <span class="title">Technologies</span>
+            <div class="card__tags">
+                <ul class="tag">
+                    <li class="tag__name">Python</li>
+                    <li class="tag__name">tensorflow/keras</li>
+                    <li class="tag__name">scikit-learn</li>
+                    <li class="tag__name">matplotlib</li>
+                    <li class="tag__name">scipy</li>
+                    <li class="tag__name">numpy</li>
+                    <li class="tag__name">pandas</li>
+                    <li class="tag__name">jupyter</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Challenges & Solutions Section -->
+<section id="challenges">
+    <div class="container">
+        <h2>Challenges & Solutions</h2>
+        <p>The main challenge in this project was dealing with large-scale data (hundreds of thousands of images), which required optimizing the training process. To overcome this, I leveraged distributed computing techniques and model parallelism. Additionally, I handled class imbalances using techniques such as Synthetic Minority Over-sampling Technique (SMOTE) to balance the data and improve model accuracy.</p>
+    </div>
+</section>
+
+<!-- Results Section -->
+<section id="results">
+    <div class="container">
+        <h2>Results</h2>
+        <p>The machine learning models I developed were able to classify the disease stages with a high clustering accuracy, providing the potential to significantly help a medical team in early disease detection. The t-SNE embeddings provided clear visual representations of the data clusters, helping to interpret the patterns and results effectively.</p>
+    </div>
+</section>
+
+<section id="explore-tsne">
+    <div class="container">
+        <h2>Explore t-SNE with Handwritten Numbers</h2>
+        <p>Since the healthcare data used in this project is private, I have created a Google Colab script that demonstrates the power of t-SNE on a public dataset. This example uses the MNIST dataset of handwritten digits and applies t-SNE to visualize how it can effectively reduce dimensionality and group similar data points based on their features.</p>
+
+        <a href="https://colab.research.google.com/drive/1WcBksQWaVAUD9g4vS8CM_lXXGgLpFYuP?usp=sharing" target="_blank">
+            <button style="border: none; background: none; padding: 0; border-radius: 16px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); overflow: hidden;">
+                <img src="assets/open_in_colab.png" alt="Button Image" style="width: 275px; height: 48px;">
+            </button>
+        </a>
+
+        <iframe src="assets/MNIST_TSNE_Demonstration.pdf" width="100%" height="800" style="border: none;">
+            Your browser does not support PDFs.
+        </iframe>
+    </div>
+</section>
+
+</body>
+</html>

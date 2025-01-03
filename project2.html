@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 2 | My Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="index.html" class="logo-link">
+            <h1 class="logo">Pranav Vyas</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero">
+    <h2>Coronary Artery Disease Classification Research</h2>
+    <p>Explore the details of my machine learning project aimed at classifying Coronary Artery Disease using advanced algorithms.</p>
+</section>
+
+<!-- Project Overview Section -->
+<section id="overview">
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>Coronary Artery Disease is one of the leading causes of death worldwide, and its early detection has the potential to save countless lives. Typically, doctors diagnose Coronary Artery Disease by obtaining radiotracer distribution in the heart using a non-invasive imaging method called Myocardial Perfusion Single-Photon Emission Computed Tomography (SPECT). However, visual evaluation of SPECT images heavily relies on the cardiologist’s experience, which can be a limitation, particularly in underprivileged areas or regions lacking experienced professionals.</p>
+        <p>In this project, I developed a machine learning model to automate the detection of CAD from SPECT images, improving diagnostic accuracy and accessibility for people in underserved locations. Using Convolutional Neural Networks (CNNs) and Transfer Learning, I trained models to classify SPECT images, providing an accurate and efficient solution for early detection of Coronary Artery Disease.</p>
+    </div>
+</section>
+
+<!-- Technologies Used Section -->
+<section id="technologies">
+    <div class="container">
+        <h2>Technologies Used</h2>
+        <div class="card">
+            <span class="title">Technologies</span>
+            <div class="card__tags">
+                <ul class="tag">
+                    <li class="tag__name">Python</li>
+                    <li class="tag__name">tensorflow/keras</li>
+                    <li class="tag__name">scikit-learn</li>
+                    <li class="tag__name">matplotlib</li>
+                    <li class="tag__name">scipy</li>
+                    <li class="tag__name">numpy</li>
+                    <li class="tag__name">pandas</li>
+                    <li class="tag__name">jupyter</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Challenges & Solutions Section -->
+<section id="challenges">
+    <div class="container">
+        <h2>Challenges & Solutions</h2>
+        <p>The main challenge was working with a relatively small dataset of 192 patients from the UC Irvine dataset, which posed a risk of overfitting. To address this, I used Transfer Learning on pre-trained models like VGG16 and ResNet50, which allowed the model to benefit from knowledge gained on large image datasets, improving performance with a smaller training set.</p>
+        <p>Another challenge was ensuring that the model could differentiate between ischemic infarctions (reduced blood flow causing tissue damage) and healthy heart tissue. This required careful dataset labeling and validation to ensure that the model could learn to detect subtle differences in the images.</p>
+    </div>
+</section>
+
+<!-- Results Section -->
+<section id="results">
+    <div class="container">
+        <h2>Results</h2>
+        <p>The CNN models achieved an impressive accuracy of 90.24% in detecting Coronary Artery Disease from SPECT images, showing that CNNs can effectively distinguish between ischemic infarctions, healthy heart tissue, and unhealthy tissue.</p>
+        <p>Infarction refers to the damage caused by a lack of blood flow to a part of the heart muscle, while ischemia refers to reduced blood supply that can lead to damage if left untreated.</p>
+        <p>The high accuracy of the model is a significant step toward automating CAD detection and improving diagnostic support, particularly in regions with limited access to specialized cardiologists.</p>
+    </div>
+</section>
+
+<!-- Explore the Project Section -->
+<section id="explore">
+    <div class="container">
+        <h2>Explore the Project</h2>
+        <img src="assets/research-abstract.png" alt="asdf" height="700" class="center">
+        <br>
+        <iframe src="assets/Southern%20California%20Conference%20for%20Undergraduate%20Research%20(SCCUR)%20Presentation.pdf" width="100%" height="800" style="border: none;">
+            Your browser does not support PDFs.
+        </iframe>
+    </div>
+</section>
+
+</body>
+</html>

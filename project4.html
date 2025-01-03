@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 4 | My Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="index.html" class="logo-link">
+            <h1 class="logo">Pranav Vyas</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero">
+    <h2>Real-time Image Classification with Machine Learning</h2>
+    <p>Explore how I applied my knowledge of TensorFlow and CNNs to build an interactive Rock Paper Scissors game that recognizes hand gestures using image classification.</p>
+</section>
+
+<!-- Project Overview Section -->
+<section id="overview">
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>In this final project for the course Machine Learning with Tensorflow at UC Berkeley Extension, I applied the concepts learned in TensorFlow and signal processing to solve a real-world problem using Convolutional Neural Networks (CNNs). The course provided hands-on experience with tools like Fast Fourier Transform, NumPy, Scipy, and Matplotlib, which I later applied to build a CNN model for image classification.</p>
+        <p>The project involved using Laurence Morony's Rock Paper Scissors dataset to create an interactive game where the model recognizes hand gestures (rock, paper, or scissors) from a set of images. This CNN model classifies the hand gestures in real-time, enabling users to play a game of Rock Paper Scissors against the computer.</p>
+    </div>
+</section>
+
+<!-- Technologies Used Section -->
+<section id="technologies">
+    <div class="container">
+        <h2>Technologies Used</h2>
+        <div class="card">
+            <span class="title">Technologies</span>
+            <div class="card__tags">
+                <ul class="tag">
+                    <li class="tag__name">Python</li>
+                    <li class="tag__name">tensorflow/keras</li>
+                    <li class="tag__name">tensorboard</li>
+                    <li class="tag__name">numpy</li>
+                    <li class="tag__name">matplotlib</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Challenges & Solutions Section -->
+<section id="challenges">
+    <div class="container">
+        <h2>Challenges & Solutions</h2>
+        <p>One of the main challenges was ensuring real-time performance for the gesture recognition system while maintaining high classification accuracy. To solve this, I optimized the model using CNN architectures that significantly reduced the computational cost while maintaining performance.</p>
+    </div>
+</section>
+
+<!-- Results Section -->
+<section id="results">
+    <div class="container">
+        <h2>Results</h2>
+        <p>The CNN model achieved an accuracy of 95% in recognizing the hand gestures for Rock, Paper, and Scissors. The game runs in real-time, with users able to play against using images in the testing data set. The system recognizes the gesture within seconds, providing an interactive and fun experience. This project demonstrated the power of TensorFlow and CNNs in creating practical applications, even for small-scale projects like this one.</p>
+    </div>
+</section>
+
+<section id="explore-game">
+    <div class="container">
+        <h2>Explore the Colab Notebook</h2>
+        <a href="https://colab.research.google.com/drive/1NFu1wxXgciJMBAiVoosUb7SuJCklibIH?usp=sharing" target="_blank">
+            <button style="border: none; background: none; padding: 0; border-radius: 16px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); overflow: hidden;">
+                <img src="assets/open_in_colab.png" alt="Button Image" style="width: 275px; height: 48px;">
+            </button>
+        </a>
+
+        <iframe src="assets/TensorFlow_Final_Project.pdf" width="100%" height="800" style="border: none;">
+            Your browser does not support PDFs.
+        </iframe>
+    </div>
+</section>
+
+</body>
+</html>

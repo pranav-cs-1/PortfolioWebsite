@@ -1,0 +1,449 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.7;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Container for central alignment */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header with navigation */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    background-color: #2c3e50;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Header Flexbox to align logo and nav in a row */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo style */
+header .logo {
+    color: #fff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+/* Navigation link styles */
+nav ul li a {
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: #ecf0f1;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: #3498db;
+}
+
+/* Hero Section with Blue to Dark Blue Gradient */
+#hero {
+    background: linear-gradient(135deg, #3498db, #1d3557);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#hero p {
+    font-size: 1.4rem;
+    color: white;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #ecf0f1;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+.button {
+    --main-focus: #2d8cf0;
+    --font-color: #1d3557;
+    --bg-color-sub: #3498db;
+    --bg-color: 135deg;
+    --main-color: #1d3557;
+    position: relative;
+    width: 300px;
+    height: 80px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 2px solid var(--main-color);
+    -webkit-box-shadow: 4px 4px var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.button, .button__icon, .button__text {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.button .button__text {
+    -webkit-transform: translateX(42px);
+    -ms-transform: translateX(42px);
+    transform: translateX(42px);
+    color: var(--font-color);
+    font-weight: 600;
+}
+
+.button .button__icon {
+    position: absolute;
+    -webkit-transform: translateX(218px);
+    -ms-transform: translateX(218px);
+    transform: translateX(218px);
+    height: 100%;
+    width: 79px;
+    background-color: var(--bg-color-sub);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.button .svg {
+    width: 30px;
+    fill: var(--main-color);
+}
+
+.button:active {
+    -webkit-transform: translate(6px, 6px);
+    -ms-transform: translate(6px, 6px);
+    transform: translate(6px, 6px);
+    -webkit-box-shadow: 0px 0px var(--main-color);
+    box-shadow: 0px 0px var(--main-color);
+}
+
+/* About, Projects, and Contact Sections */
+section {
+    padding: 80px 0;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+section h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #555;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about {
+    padding-bottom: 2px;
+}
+
+/* Project Card Styles */
+.project-card {
+    display: flex;
+    background-color: rgba(245, 245, 245, 0.3);
+    margin-bottom: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px #fff;
+}
+
+.project-link {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.project-img {
+    width: 30%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-right: 1px solid rgb(204, 204, 204);
+    zoom:180%;
+}
+
+.project-content {
+    padding: 20px;
+    width: 60%;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto 0;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.project-content h3 {
+    font-size: 1.3rem;
+    color: rgba(52, 121, 247, 1);
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 1.2rem;
+    color: #000000;
+    padding-bottom: 15px;
+}
+
+/* Technologies Used Section Styles */
+#technologies {
+    padding: 80px 0;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+#technologies h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tech-item {
+    text-align: center;
+    max-width: 280px;
+    width: 100%;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tech-item .image-wrapper {
+    width: 100px;
+    height: 100px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tech-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.tech-item p {
+    font-size: 1.3rem;
+    color: #555;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Space between the text and the button */
+#explore-tsne p {
+    margin-bottom: 30px;
+}
+
+/* Button Styling */
+#explore-tsne button {
+    margin-bottom: 0;
+}
+
+/* Space between the button and the iframe (PDF) */
+#explore-tsne iframe {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.card {
+    width: 500px;
+    height: 300px;
+    background: #A7C6ED;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #2F4B6F;
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: 900;
+    font-size: 1.7em;
+    color: #1C2A47;
+}
+
+.tag__name {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.1em;
+    background-color: #4A7BFF;
+    padding: 6px 23px 9px;
+    border-radius: 70em;
+    margin: 8px 6px 8px 0;
+    position: relative;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.tag__name::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #0056b3;
+    margin-right: 8px;
+}
+
+.tag__name::after {
+    right: 7px;
+}
+
+.tag__name:hover {
+    transform: scale(1.1);
+    background-color: #3A6ED8;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
