@@ -18,6 +18,9 @@ body {
     line-height: 1.7;
     padding: 0;
     transition: background-color 0.3s ease;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
 }
 
 /* Links */
@@ -50,7 +53,6 @@ header {
     transition: background-color 0.3s ease;
 }
 
-/* Header Flexbox to align logo and nav in a row */
 header .container {
     display: flex;
     justify-content: space-between;
@@ -195,7 +197,7 @@ button {
 
 /* About, Projects, and Contact Sections */
 section {
-    padding: 80px 0;
+    padding: 40px 0;
     background-color: #ecf0f1;
     color: #2c3e50;
 }
@@ -208,12 +210,11 @@ section h2 {
 }
 
 section p {
-    font-size: 1.2rem;
-    line-height: 1.7;
+    font-size: 1.1rem;
     color: #555;
     text-align: center;
-    max-width: 800px;
     margin: 0 auto;
+    max-width: 50rem;
 }
 
 #about {
@@ -224,7 +225,7 @@ section p {
 .project-card {
     display: flex;
     background-color: rgba(245, 245, 245, 0.3);
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -257,45 +258,6 @@ section p {
     width: 60%;
 }
 
-/* Contact Form Styling */
-.contact-form {
-    max-width: 600px;
-    margin: 40px auto;
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px #333;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #333;
-    font-size: 1rem;
-}
-
-.contact-form button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block;
-    margin: 20px auto 0;
-}
-
-.contact-form button:hover {
-    background-color: #0056b3;
-}
-
 .project-content h3 {
     font-size: 1.3rem;
     color: rgba(52, 121, 247, 1);
@@ -310,7 +272,7 @@ section p {
 
 /* Technologies Used Section Styles */
 #technologies {
-    padding: 80px 0;
+    padding: 40px 0;
     background-color: #ecf0f1;
     color: #2c3e50;
 }
@@ -382,12 +344,10 @@ section p {
     margin-bottom: 0;
 }
 
-/* Space between the button and the iframe (PDF) */
 #explore-tsne iframe {
     margin-top: 0;
     margin-bottom: 0;
 }
-
 
 .card {
     width: 500px;
