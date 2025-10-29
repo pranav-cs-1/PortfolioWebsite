@@ -12,14 +12,14 @@ html {
 }
 
 body {
-    background-color: #f5f7fa;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     color: #333;
     font-size: 16px;
     line-height: 1.7;
     padding: 0;
+    padding-top: 80px;
     transition: background-color 0.3s ease;
-    background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 }
 
@@ -43,28 +43,33 @@ a:hover {
 
 /* Header with navigation */
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
-    padding: 20px 0;
-    background-color: #2c3e50;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    background: rgba(44, 62, 80, 0.98);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
 }
 
 /* Logo style */
 header .logo {
     color: #fff;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 /* Navigation menu */
@@ -72,46 +77,255 @@ nav ul {
     list-style: none;
     display: flex;
     padding-left: 0;
+    gap: 10px;
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin-left: 0;
 }
 
 /* Navigation link styles */
-nav ul li a {
+.nav-link {
     font-weight: 500;
-    font-size: 1.1rem;
-    text-transform: uppercase;
+    font-size: 1rem;
     color: #ecf0f1;
-    padding: 8px 16px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 8px;
     transition: all 0.3s ease;
+    position: relative;
 }
 
-nav ul li a:hover {
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
     color: #fff;
-    background-color: #3498db;
+    background-color: rgba(52, 152, 219, 0.15);
 }
 
-/* Hero Section with Blue to Dark Blue Gradient */
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Hero Section */
 #hero {
-    background: linear-gradient(135deg, #3498db, #1d3557);
-    padding: 80px 0;
+    position: relative;
+    min-height: 85vh;
+    margin-top: -80px;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #3498db 100%);
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(52, 152, 219, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(41, 128, 185, 0.3) 0%, transparent 50%);
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
     text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
     color: white;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-name {
+    background: linear-gradient(135deg, #fff, #a8daff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 15px;
+    font-weight: 500;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.8s ease-out 0.6s backwards;
+}
+
+.hero-btn {
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-btn.primary {
+    background: white;
+    color: #2c3e50;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    background: #f8f9fa;
+}
+
+.hero-btn.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.hero-btn.secondary:hover {
+    background: white;
+    color: #2c3e50;
+    transform: translateY(-3px);
+}
+
+.hero-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.hero-btn:hover svg {
+    transform: translateY(2px);
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+    #hero {
+        min-height: 70vh;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
+
+/* Project Pages Hero Styling */
+#hero:not(:has(.hero-content)) {
+    margin-top: -80px;
+    padding: 140px 20px 60px;
+    min-height: auto;
+    display: block;
 }
 
 #hero h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 700;
-    margin-bottom: 20px;
     color: white;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 0 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-#hero p {
-    font-size: 1.4rem;
-    color: white;
+#hero > p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    line-height: 1.7;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    #hero:not(:has(.hero-content)) {
+        padding: 120px 20px 50px;
+    }
+    
+    #hero h2 {
+        font-size: 2rem;
+    }
+    
+    #hero > p {
+        font-size: 1rem;
+    }
 }
 
 button {
@@ -197,16 +411,17 @@ button {
 
 /* About, Projects, and Contact Sections */
 section {
-    padding: 40px 0;
-    background-color: #ecf0f1;
+    padding: 80px 0;
+    background-color: #ffffff;
     color: #2c3e50;
 }
 
 section h2 {
     font-size: 2.8rem;
     font-weight: 600;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     text-align: center;
+    color: #2c3e50;
 }
 
 section p {
@@ -217,24 +432,518 @@ section p {
     max-width: 50rem;
 }
 
+/* About Section */
 #about {
-    padding-bottom: 2px;
+    background: transparent;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #5a6c7d;
+    margin-bottom: 50px;
+}
+
+.about-description strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* GitHub Section */
+.github-section {
+    margin-top: 50px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    border: 1px solid #d1d5da;
+    border-radius: 12px;
+    padding: 25px 30px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.github-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.github-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.github-logo {
+    flex-shrink: 0;
+}
+
+.github-section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.github-open-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #3498db;
+    text-decoration: underline;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.github-open-link:hover {
+    color: #2980b9;
+}
+
+.github-open-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+.github-container {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+/* GitHub Profile Sidebar */
+.github-sidebar {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.github-profile-card {
+    text-align: center;
+}
+
+.github-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    border: 2px solid #e0e0e0;
+}
+
+.github-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+}
+
+.github-handle {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin: 0 0 15px 0;
+}
+
+.github-follow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: white;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+}
+
+.github-follow-btn:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* GitHub Main Content */
+.github-main {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Popular Repositories */
+.github-repos {
+    margin-bottom: 20px;
+}
+
+.repos-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.repos-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.repo-card {
+    background: #fafbfc;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.repo-card:hover {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-color: #3498db;
+}
+
+.repo-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 5px;
+}
+
+.repo-icon {
+    flex-shrink: 0;
+}
+
+.repo-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #3498db;
+    margin: 0;
+    flex: 1;
+}
+
+.repo-visibility {
+    font-size: 0.65rem;
+    color: #6c757d;
+    border: 1px solid #d1d5da;
+    padding: 1px 6px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.repo-card:hover .repo-name {
+    text-decoration: underline;
+}
+
+.repo-description {
+    font-size: 0.75rem;
+    color: #6c757d;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    flex: 1;
+}
+
+.repo-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.7rem;
+}
+
+.repo-language {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #6c757d;
+}
+
+.lang-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.lang-dot.html {
+    background-color: #e34c26;
+}
+
+.lang-dot.java {
+    background-color: #b07219;
+}
+
+.lang-dot.go {
+    background-color: #00ADD8;
+}
+
+.lang-dot.python {
+    background-color: #3572A5;
+}
+
+.repo-stars,
+.repo-forks {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: #6c757d;
+}
+
+.repo-stars svg,
+.repo-forks svg {
+    width: 14px;
+    height: 14px;
+}
+
+.loading-message,
+.error-message,
+.no-repos-message {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.error-message {
+    color: #e74c3c;
+}
+
+.loading-message {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* GitHub Activity/Contribution Graph */
+.github-activity {
+    margin-top: 25px;
+}
+
+.activity-count {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.github-chart-wrapper {
+    background: #fafbfc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e1e4e8;
+    overflow: hidden;
+}
+
+.github-chart-link {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.github-contributions {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+@media (max-width: 968px) {
+    .github-section {
+        max-width: 100%;
+        padding: 25px;
+    }
+    
+    .github-container {
+        flex-direction: column;
+    }
+    
+    .github-sidebar {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .repos-list {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .github-section {
+        padding: 20px;
+    }
+    
+    .repos-title, .activity-count {
+        text-align: center;
+    }
+    
+    .github-chart-wrapper {
+        padding: 12px;
+    }
+}
+
+/* Dark Mode GitHub Section */
+.github-section.dark-mode {
+    background: #0d1117;
+    border-color: #30363d;
+    margin-top: 40px;
+}
+
+.github-section.dark-mode .github-section-header {
+    border-bottom-color: #21262d;
+}
+
+.github-section.dark-mode .github-section-title {
+    color: #c9d1d9;
+}
+
+.github-section.dark-mode .github-open-link {
+    color: #58a6ff;
+}
+
+.github-section.dark-mode .github-open-link:hover {
+    color: #79c0ff;
+}
+
+.github-section.dark-mode .github-profile-card {
+    background: transparent;
+}
+
+.github-section.dark-mode .github-avatar {
+    border-color: #30363d;
+}
+
+.github-section.dark-mode .github-name {
+    color: #c9d1d9;
+}
+
+.github-section.dark-mode .github-handle {
+    color: #8b949e;
+}
+
+.github-section.dark-mode .github-follow-btn {
+    background: white;
+    border-color: #e0e0e0;
+    color: #2c3e50;
+}
+
+.github-section.dark-mode .github-follow-btn:hover {
+    background: #f5f5f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.github-section.dark-mode .repos-title,
+.github-section.dark-mode .activity-count {
+    color: #c9d1d9;
+}
+
+.github-section.dark-mode .repo-card {
+    background: #161b22;
+    border-color: #30363d;
+}
+
+.github-section.dark-mode .repo-card:hover {
+    background: #1c2128;
+    border-color: #58a6ff;
+}
+
+.github-section.dark-mode .repo-name {
+    color: #58a6ff;
+}
+
+.github-section.dark-mode .repo-description {
+    color: #8b949e;
+}
+
+.github-section.dark-mode .repo-visibility {
+    color: #8b949e;
+    border-color: #30363d;
+}
+
+.github-section.dark-mode .repo-language {
+    color: #8b949e;
+}
+
+.github-section.dark-mode .repo-stars,
+.github-section.dark-mode .repo-forks {
+    color: #8b949e;
+}
+
+.github-section.dark-mode .loading-message,
+.github-section.dark-mode .no-repos-message {
+    color: #8b949e;
+}
+
+.github-section.dark-mode .error-message {
+    color: #f85149;
+}
+
+.github-section.dark-mode .github-chart-wrapper {
+    background: #161b22;
+    border-color: #30363d;
+}
+
+/* Projects Section Styling */
+#projects {
+    padding: 80px 0;
+    background: transparent;
+}
+
+#projects h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.projects-subtitle {
+    display: none;
+}
+
+/* Projects Grid Layout */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Project Card Styles */
 .project-card {
-    display: flex;
-    background-color: rgba(245, 245, 245, 0.3);
-    margin-bottom: 40px;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
 .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(52, 152, 219, 0.2);
 }
 
 .project-link {
@@ -244,94 +953,363 @@ section p {
     width: 100%;
 }
 
+/* Project Image with Overlay */
 .project-img {
-    width: 30%;
-    height: 100%;
-    background-size: cover;
+    width: 35%;
+    min-height: 180px;
+    background-size: 112%;
     background-position: center;
-    border-right: 1px solid rgb(204, 204, 204);
-    zoom:180%;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    border-right: 1px solid #e0e0e0;
 }
 
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(44, 62, 80, 0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-img {
+    transform: scale(1.05);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Project Content */
 .project-content {
-    padding: 20px;
-    width: 60%;
+    padding: 25px 30px;
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Project Badge */
+.project-badge {
+    display: none;
 }
 
 .project-content h3 {
     font-size: 1.3rem;
-    color: rgba(52, 121, 247, 1);
-    margin-bottom: 10px;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-content h3 {
+    color: #3498db;
 }
 
 .project-content p {
-    font-size: 1.2rem;
-    color: #000000;
-    padding-bottom: 15px;
+    font-size: 0.95rem;
+    color: #6c757d;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0;
 }
 
-/* Technologies Used Section Styles */
+/* Project Arrow Icon */
+.project-arrow {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.4s ease;
+}
+
+.project-card:hover .project-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .project-link {
+        flex-direction: column;
+    }
+    
+    .project-img {
+        width: 100%;
+        min-height: 220px;
+    }
+    
+    .project-content {
+        padding: 25px;
+    }
+    
+    .project-arrow {
+        bottom: 20px;
+        right: 20px;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        gap: 25px;
+    }
+    
+    .project-img {
+        min-height: 200px;
+    }
+    
+    .project-content {
+        padding: 20px;
+    }
+    
+    #projects h2 {
+        font-size: 2.5rem;
+    }
+    
+    .projects-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Project Page Sections */
+#overview, #challenges, #results, #explore-tsne, #explore, #explore-game, #explore-model, #explore-demo {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+#overview h2, #challenges h2, #results h2, #explore-tsne h2, #explore h2, #explore-game h2, #explore-model h2, #explore-demo h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+#overview p, #challenges p, #results p, #explore-tsne p, #explore p, #explore-demo p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #5a6c7d;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto 20px;
+}
+
+#overview {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+#challenges {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+#results {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+}
+
+/* Technologies Used Section */
 #technologies {
-    padding: 40px 0;
-    background-color: #ecf0f1;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
     color: #2c3e50;
 }
 
 #technologies h2 {
-    font-size: 2.8rem;
-    font-weight: 600;
-    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
     text-align: center;
+    color: #2c3e50;
 }
 
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    justify-items: center;
-    align-items: center;
-    margin-top: 80px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.tech-item {
-    text-align: center;
-    max-width: 280px;
-    width: 100%;
-    padding: 25px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.tech-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.tech-item .image-wrapper {
-    width: 100px;
-    height: 100px;
-    background-color: #f5f5f5;
+.card {
+    width: 500px;
+    height: 300px;
+    background: white;
+    padding: 20px;
     display: flex;
+    flex-direction: column;
+    color: #2c3e50;
+    border-radius: 15px;
+    margin: 0 auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(52, 152, 219, 0.15);
+}
+
+.card .title {
+    display: none;
+}
+
+.card__tags {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.tag {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
 }
 
-.tech-item img {
+.tag__name {
+    display: inline-flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.1em;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    padding: 6px 23px 9px;
+    border-radius: 70em;
+    margin: 8px 6px 8px 0;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+}
+
+.tag__name:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+}
+
+/* Explore/Demo Sections */
+#explore-tsne, #explore-game, #explore-model, #explore, #explore-demo {
+    background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+}
+
+#explore-tsne .container, #explore-game .container, #explore-model .container, #explore .container {
+    text-align: center;
+}
+
+#explore-tsne a, #explore-game a {
+    display: inline-block;
+    margin: 30px auto;
+}
+
+#explore-tsne button, #explore-game button {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#explore-tsne button:hover, #explore-game button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+#explore-tsne iframe, #explore-game iframe, #explore-model iframe {
+    margin-top: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+#explore img, .demo-image {
     max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
-.tech-item p {
-    font-size: 1.3rem;
-    color: #555;
+.demo-source {
+    text-align: center;
+    font-size: 1rem;
+    color: #5a6c7d;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Back to Projects Button */
+.back-to-projects {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-top: 10px;
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(52, 152, 219, 0.4);
+    background: linear-gradient(135deg, #2980b9, #1f6ca5);
+}
+
+.back-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover svg {
+    transform: translateX(-5px);
+}
+
+/* Responsive Design for Project Pages */
+@media (max-width: 768px) {
+    #overview h2, #challenges h2, #results h2, #explore-tsne h2, #explore h2, #explore-game h2, #explore-model h2, #explore-demo h2, #technologies h2 {
+        font-size: 2rem;
+    }
+    
+    #overview p, #challenges p, #results p, #explore-tsne p, #explore p, #explore-demo p {
+        font-size: 1rem;
+    }
+    
+    .card {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        min-height: 280px;
+        padding: 20px 15px;
+    }
+    
+    .tag__name {
+        font-size: 0.95em;
+        padding: 5px 18px 7px;
+    }
+    
+    .back-btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
 }
 
 /* Space between the text and the button */

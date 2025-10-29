@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pranav Vyas Portfolio - Levitree</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1 class="logo"><a href="/" style="color: inherit; text-decoration: none;">Pranav Vyas</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/#about" class="nav-link">About</a></li>
+                <li><a href="/#projects" class="nav-link">Projects</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero">
+    <h2>Levitree Internship</h2>
+    <p>Explore the details of my software engineering internship where I developed web applications and data pipelines for geospatial data visualization.</p>
+</section>
+
+<!-- Project Overview Section -->
+<section id="overview">
+    <div class="container">
+        <h2>Project Overview</h2>
+        <p>During my internship at Levitree, I developed a customer-facing web portal for visualizing terrain data across 160,000+ square miles and created ETL data pipelines to process 700,000+ geospatial data points using Python, React, and Google Cloud Platform (GCP).</p>
+        <p>The project involved automating manual workflows for data ingestion of geological records and enabling real-time data quality validations for terrain data using Kepler.gl, an open-source geospatial analysis tool developed by Uber. The web portal provides interactive maps and data analytics tools that help users understand terrain characteristics, elevation patterns, and geographic features across vast regions.</p>
+    </div>
+</section>
+
+<!-- Technologies Used Section -->
+<section id="technologies">
+    <div class="container">
+        <h2>Technologies Used</h2>
+        <div class="card">
+            <span class="title">Technologies</span>
+            <div class="card__tags">
+                <ul class="tag">
+                    <li class="tag__name">Python</li>
+                    <li class="tag__name">React</li>
+                    <li class="tag__name">Google Cloud Platform</li>
+                    <li class="tag__name">Kepler.gl</li>
+                    <li class="tag__name">PostgreSQL</li>
+                    <li class="tag__name">OCR Models</li>
+                    <li class="tag__name">LLM APIs</li>
+                    <li class="tag__name">ETL Pipelines</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Challenges & Solutions Section -->
+<section id="challenges">
+    <div class="container">
+        <h2>Challenges & Solutions</h2>
+        <p>One of the main challenges was automating the ingestion of geological records from diverse sources. To address this, I created OCR models to read geospatial data reports and utilized LLM APIs to extract structured data from the collected information. This automated process replaced manual data entry workflows and significantly improved data accuracy.</p>
+        <p>Another major challenge was handling the massive volume of geospatial data efficiently. I set up APIs to query existing data sources in databases and designed ETL pipelines that could batch process 700,000+ data points while maintaining data integrity. The system includes real-time data quality validations using Kepler.gl to ensure terrain data accuracy before visualization.</p>
+        <p>Creating an intuitive user interface that could display complex terrain data across 160,000+ square miles was also challenging. I implemented interactive visualization features using React and Kepler.gl, ensuring the interface remained responsive even when rendering large datasets.</p>
+    </div>
+</section>
+
+<!-- Results Section -->
+<section id="results">
+    <div class="container">
+        <h2>Results</h2>
+        <p>The web portal successfully processes and visualizes terrain data across 160,000+ square miles with excellent performance. The automated data ingestion workflows eliminated manual data entry, while the OCR and LLM-based extraction systems achieved high accuracy in processing geological records.</p>
+        <p>The ETL pipelines efficiently handle 700,000+ geospatial data points with real-time quality validations, enabling accurate queries and interactive exploration. The system has been deployed to production and is actively used by customers for terrain analysis and geographic planning.</p>
+    </div>
+</section>
+
+<!-- Kepler.gl Demo Section -->
+<section id="explore-demo">
+    <div class="container">
+        <h2>Explore Kepler.gl Visualization</h2>
+        <p>Since the company data used in this project is proprietary, I have included a visualization demonstrating Kepler.gl's geospatial analysis capabilities using historical earthquake data from the United States Geological Survey (USGS). This example showcases the type of interactive geospatial visualization and analysis tools that were implemented in the Levitree web portal.</p>
+        <p class="demo-source">Data Source: <a href="https://earthquake.usgs.gov/" target="_blank" style="color: #3498db; font-weight: 600;">USGS Earthquake Hazards Program</a></p>
+        <img src="assets/kepler-gl-gif.gif" alt="Kepler.gl USGS Historical Earthquake Data Visualization" class="demo-image">
+    </div>
+</section>
+
+<!-- Back to Projects -->
+<div class="back-to-projects">
+    <a href="/#projects" class="back-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to Projects
+    </a>
+</div>
+
+</body>
+</html>
+

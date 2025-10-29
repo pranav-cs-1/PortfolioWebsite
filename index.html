@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pranav Vyas Portfolio</title>
 
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,87 +16,393 @@
         <h1 class="logo">Pranav Vyas</h1>
         <nav>
             <ul>
-                <li><a href="index.html#"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 <section id="hero">
-    <div class="container">
-        <h2>Welcome to My Portfolio</h2>
+    <div class="hero-background"></div>
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1 class="hero-title"><span class="hero-name">Pranav Vyas</span></h1>
+            <p class="hero-subtitle">Computer Science Student at Georgia Tech</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="hero-btn primary">View My Work</a>
+                <a href="https://drive.google.com/file/d/1wQwVEVk4ejy1JxZiqyjBmze4oMpNmc_B/view?usp=sharing" target="_blank" class="hero-btn secondary">
+                    <span>View Resume</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 3H21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
 <section id="about">
     <div class="container">
         <h2>About Me</h2>
-        <p>I am currently an undergraduate student at Georgia Tech pursuing a Bachelor's of Science in Computer Science.</p>
-        <br>
-        <a href="https://drive.google.com/file/d/11Q2UtguTh6BRTj2vsS9snpj161WuSYc3/view?usp=sharing" target="_blank">
-            <button type="button" class="button">
-                <span class="button__text">Resume</span>
-                <span class="button__icon">
-                    <svg class="svg" data-name="Layer 2" id="bdd05811-e15d-428c-bb53-8661459f9307" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
-                        <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
-                        <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
-                    </svg>
-                </span>
-            </button>
-        </a>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="about-description">I am currently an undergraduate student at Georgia Tech pursuing a Bachelor's of Science in Computer Science. I'm passionate about leveraging technology to solve real-world problems, with a focus on fullstack development and large-scale data processing.</p>
+                
+                <!-- GitHub Section -->
+                <div class="github-section">
+                    <div class="github-section-header">
+                        <div class="github-header-left">
+                            <svg height="20" width="20" viewBox="0 0 16 16" class="github-logo">
+                                <path fill="#2c3e50" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                            </svg>
+                            <span class="github-section-title">GitHub Profile - pranav-cs-1</span>
+                        </div>
+                        <a href="https://github.com/pranav-cs-1" target="_blank" class="github-open-link">
+                            <span>Open in GitHub</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15 3H21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="github-container">
+                        <!-- GitHub Profile Sidebar -->
+                        <div class="github-sidebar">
+                            <div class="github-profile-card">
+                                <img id="github-avatar" src="https://github.com/pranav-cs-1.png" alt="pranav-cs-1" class="github-avatar">
+                                <h3 id="github-name" class="github-name">Pranav Vyas</h3>
+                                <p id="github-handle" class="github-handle">pranav-cs-1</p>
+                                <a id="github-profile-link" href="https://github.com/pranav-cs-1" target="_blank" class="github-follow-btn">
+                                    <svg height="16" width="16" viewBox="0 0 16 16" class="github-icon-small">
+                                        <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                                    </svg>
+                                    View GitHub Profile
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- GitHub Main Content -->
+                        <div class="github-main">
+                            <!-- Popular Repositories -->
+                            <div class="github-repos">
+                                <h4 class="repos-title">Popular repositories</h4>
+                                <div id="repos-list" class="repos-list">
+                                    <!-- Repositories will be loaded dynamically -->
+                                    <div class="loading-message">Loading repositories...</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contribution Graph -->
+                            <div class="github-activity">
+                                <h4 id="activity-count" class="activity-count">Contributions in the last year</h4>
+                                <div class="github-chart-wrapper">
+                                    <a id="github-chart-link" href="https://github.com/pranav-cs-1" target="_blank" class="github-chart-link">
+                                        <img id="github-contributions" src="https://ghchart.rshah.org/3498db/pranav-cs-1" alt="GitHub Contribution Graph" class="github-contributions"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-
-<section id="resume">
-
-</section>
-
-
 
 <section id="projects">
     <div class="container">
-        <h2>My Projects</h2>
+        <h2>Internships and Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <a href="project6" class="project-link">
+                    <div class="project-img" style="background-image: url('assets/zoomlogi.png')">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge internship">Internship</span>
+                        <h3>Zoomlogi Internship</h3>
+                        <p>Developing automated backend data processing pipelines and applying NLP-based entity extraction to consolidate FDA pharmaceutical information into a unified data platform.</p>
+                        <div class="project-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="project5" class="project-link">
+                    <div class="project-img" style="background-image: url('assets/levitree.png')">
+                        <div class="project-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-badge internship">Internship</span>
+                        <h3>Levitree Internship</h3>
+                        <p>Developed a customer-facing web portal for visualizing terrain data across 160,000+ square miles and created ETL data pipelines to process 700,000+ geospatial data points.</p>
+                        <div class="project-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </div>
         <div class="project-card">
-            <a href="project1.html" class="project-link">
-                <div class="project-img" style="background-image: url('assets/kovadx.png')"></div>
+            <a href="project1" class="project-link">
+                    <div class="project-img" style="background-image: url('assets/kovadx.png')">
+                        <div class="project-overlay"></div>
+                    </div>
                 <div class="project-content">
+                        <span class="project-badge internship">Internship</span>
                     <h3>KovaDx Internship</h3>
-                    <p2>Designed and developed machine learning models for disease classification as a Software Engineer Intern at KovaDx, a Yale InnovateHealth accelerated healthcare startup.</p2>
+                        <p>Designed and developed machine learning models for disease classification as a Software Engineer Intern at KovaDx, a Yale InnovateHealth accelerated healthcare startup.</p>
+                        <div class="project-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                 </div>
             </a>
         </div>
         <div class="project-card">
-            <a href="project2.html" class="project-link">
-                <div class="project-img" style="background-image: url('assets/sccur.png');"></div>
+            <a href="project2" class="project-link">
+                    <div class="project-img" style="background-image: url('assets/sccur.png')">
+                        <div class="project-overlay"></div>
+                    </div>
                 <div class="project-content">
+                        <span class="project-badge research">Research</span>
                     <h3>SCCUR Research Project</h3>
-                    <p2>Accepted to the Southern California Conference for Undergraduate Research for my research on utilizing single-photon emission computerized tomography (SPECT) scans to detect coronary artery disease using machine learning.</p2>
+                        <p>Accepted to the Southern California Conference for Undergraduate Research for my research on utilizing single-photon emission computerized tomography (SPECT) scans to detect coronary artery disease using machine learning.</p>
+                        <div class="project-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                 </div>
             </a>
         </div>
         <div class="project-card">
-            <a href="project3.html" class="project-link">
-                <div class="project-img" style="background-image: url('assets/agriculture.png');"></div>
+            <a href="project3" class="project-link">
+                    <div class="project-img" style="background-image: url('assets/agriculture.png')">
+                        <div class="project-overlay"></div>
+                    </div>
                 <div class="project-content">
+                        <span class="project-badge research">Research</span>
                     <h3>Computational Optimization Research at Stanford University</h3>
-                    <p2>Designed and implemented a causal inference and optimization design for optimizing agricultural yield, and presented the research to 30+ student researchers and Stanford faculty members.</p2>
+                        <p>Designed and implemented a causal inference and optimization design for optimizing agricultural yield, and presented the research to 30+ student researchers and Stanford faculty members.</p>
+                        <div class="project-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                 </div>
             </a>
         </div>
         <div class="project-card">
-            <a href="project4.html" class="project-link">
-                <div class="project-img" style="background-image: url('assets/extension.png');"></div>
+            <a href="project4" class="project-link">
+                    <div class="project-img" style="background-image: url('assets/extension.png')">
+                        <div class="project-overlay"></div>
+                    </div>
                 <div class="project-content">
+                        <span class="project-badge course">Course Project</span>
                     <h3>Machine Learning with Tensorflow Course</h3>
-                    <p2>This course at the UC Berkeley Extension focuses on exploring the use of TensorFlow, and my final project for this course helped me in applying my knowledge to use Convolutional Neural Network models for image classification. </p2>
+                        <p>This course at the UC Berkeley Extension focuses on exploring the use of TensorFlow, and my final project for this course helped me in applying my knowledge to use Convolutional Neural Network models for image classification.</p>
+                        <div class="project-arrow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
                 </div>
             </a>
+            </div>
         </div>
     </div>
 </section>
 
+<script>
+// GitHub API Configuration
+const GITHUB_USERNAME = 'pranav-cs-1';
+const GITHUB_API_BASE = 'https://api.github.com';
+const REFRESH_INTERVAL = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+// Language colors mapping (common GitHub language colors)
+const LANGUAGE_COLORS = {
+    'JavaScript': '#f1e05a',
+    'TypeScript': '#3178c6',
+    'Python': '#3572A5',
+    'Java': '#b07219',
+    'HTML': '#e34c26',
+    'CSS': '#563d7c',
+    'Go': '#00ADD8',
+    'Rust': '#dea584',
+    'Ruby': '#701516',
+    'PHP': '#4F5D95',
+    'C++': '#f34b7d',
+    'C': '#555555',
+    'Shell': '#89e051',
+    'Swift': '#ffac45',
+    'Kotlin': '#A97BFF',
+    'Dart': '#00B4AB',
+    'R': '#198CE7'
+};
+
+// Fetch GitHub user profile data
+async function fetchGitHubProfile() {
+    try {
+        const response = await fetch(`${GITHUB_API_BASE}/users/${GITHUB_USERNAME}`);
+        if (!response.ok) throw new Error('Failed to fetch profile');
+        const data = await response.json();
+        
+        // Update profile information
+        const avatar = document.getElementById('github-avatar');
+        const name = document.getElementById('github-name');
+        const handle = document.getElementById('github-handle');
+        const profileLink = document.getElementById('github-profile-link');
+        
+        if (avatar) avatar.src = data.avatar_url;
+        if (name) name.textContent = data.name || data.login;
+        if (handle) handle.textContent = data.login;
+        if (profileLink) profileLink.href = data.html_url;
+        
+        console.log('✓ GitHub profile updated');
+    } catch (error) {
+        console.error('Error fetching GitHub profile:', error);
+    }
+}
+
+// Fetch GitHub repositories
+async function fetchGitHubRepos() {
+    try {
+        const response = await fetch(`${GITHUB_API_BASE}/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`);
+        if (!response.ok) throw new Error('Failed to fetch repositories');
+        const repos = await response.json();
+        
+        // Sort by stars (include both forks and non-forks)
+        const popularRepos = repos
+            .sort((a, b) => b.stargazers_count - a.stargazers_count)
+            .slice(0, 6); // Get top 6 repositories
+        
+        displayRepositories(popularRepos);
+        console.log('✓ GitHub repositories updated');
+    } catch (error) {
+        console.error('Error fetching GitHub repositories:', error);
+        document.getElementById('repos-list').innerHTML = '<div class="error-message">Failed to load repositories</div>';
+    }
+}
+
+// Display repositories in the DOM
+function displayRepositories(repos) {
+    const reposList = document.getElementById('repos-list');
+    if (!reposList) return;
+    
+    if (repos.length === 0) {
+        reposList.innerHTML = '<div class="no-repos-message">No repositories found</div>';
+        return;
+    }
+    
+    reposList.innerHTML = repos.map(repo => {
+        const langColor = LANGUAGE_COLORS[repo.language] || '#ccc';
+        const description = repo.description || 'No description provided';
+        const visibility = repo.private ? 'Private' : 'Public';
+        
+        return `
+            <a href="${repo.html_url}" target="_blank" class="repo-card">
+                <div class="repo-header">
+                    <svg height="16" width="16" viewBox="0 0 16 16" class="repo-icon">
+                        <path fill="#3498db" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8z"></path>
+                    </svg>
+                    <h5 class="repo-name">${repo.name}</h5>
+                    <span class="repo-visibility">${visibility}</span>
+                </div>
+                <p class="repo-description">${description}</p>
+                <div class="repo-meta">
+                    ${repo.language ? `
+                        <span class="repo-language">
+                            <span class="lang-dot" style="background-color: ${langColor};"></span>
+                            ${repo.language}
+                        </span>
+                    ` : ''}
+                    ${repo.stargazers_count > 0 ? `
+                        <span class="repo-stars">
+                            <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+                            </svg>
+                            ${repo.stargazers_count}
+                        </span>
+                    ` : ''}
+                    ${repo.forks_count > 0 ? `
+                        <span class="repo-forks">
+                            <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
+                            </svg>
+                            ${repo.forks_count}
+                        </span>
+                    ` : ''}
+                </div>
+            </a>
+        `;
+    }).join('');
+}
+
+// Update contribution graph display
+async function updateGitHubContributions() {
+    try {
+        // Update the contribution count display
+        const activityCount = document.getElementById('activity-count');
+        if (activityCount) {
+            activityCount.textContent = 'Contributions in the last year';
+        }
+        
+        // Refresh the contribution graph image with a cache-busting parameter
+        const contributionsImg = document.getElementById('github-contributions');
+        if (contributionsImg) {
+            const baseUrl = 'https://ghchart.rshah.org/3498db/pranav-cs-1';
+            contributionsImg.src = `${baseUrl}?${new Date().getTime()}`;
+        }
+        
+        console.log('✓ GitHub contributions graph updated');
+    } catch (error) {
+        console.error('Error updating GitHub contributions:', error);
+    }
+}
+
+// Main function to update all GitHub data
+async function updateGitHubData() {
+    console.log('🔄 Updating GitHub data...');
+    await Promise.all([
+        fetchGitHubProfile(),
+        fetchGitHubRepos(),
+        updateGitHubContributions()
+    ]);
+    console.log('✅ GitHub data update complete');
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('🚀 Initializing GitHub data fetch...');
+    updateGitHubData();
+    
+    // Set up auto-refresh
+    setInterval(() => {
+        console.log('⏰ Auto-refreshing GitHub data...');
+        updateGitHubData();
+    }, REFRESH_INTERVAL);
+    
+    console.log(`📅 Auto-refresh set to every ${REFRESH_INTERVAL / 60000} minutes`);
+});
+
+// Also update when page becomes visible again (user returns to tab)
+document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+        console.log('👀 Page visible - refreshing GitHub data...');
+        updateGitHubData();
+    }
+});
+</script>
 </body>
 </html>
